@@ -2,20 +2,37 @@
 <html>
 <head>
 	<title></title>
+<!-- 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<section>
+<div class="container">
+	<div class="col-sm-12">
+		<nav>
+			<ul id="navigation" class="nav nav-tabs">
+				<li id="home"><a>Home</a></li>
+				<li id="repo"><a>Repo</a></li>
+				<li id="repo-detail"><a>Repo Detail</a></li>
+				<li id="repo-issues"><a>Repo Issues</a></li>
+				<li id="new-issues"><a>New Issue</a></li>
+				<li id="logout">Logout</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+	<section id="main-login">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-sm-12">
 					<form>
 						<div class="form-group">
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<input type="text" id="tokId" class="form-control" placeholder="API thing">
 								</div>
-								<div class="col-md-6">
+								<div class="col-sm-6">
 									<button type="submit" class="btn btn-primary" id="login">Login</button>
 								</div>
 							</div>
@@ -25,7 +42,48 @@
 			</div>
 		</div>
 	</section>
-	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<section id="main-profile">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<ul id="profile">
+					<!-- 	<li>Example</li>
+						<li>Example</li>
+						<li>Example</li>
+						<li>Example</li>
+						<li>Example</li> -->
+					</ul>
+				</div>
+				<div class="col-sm-3 col-sm-offset-3 gitpic">
+				<!-- 	<img src="#"> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Stars</th>
+								<th>Open Issues</th>
+							</tr>
+						</thead>
+						<tbody id="repo-list">
+						</tbody>
+					</table>		
+				</div>	
+			</div>
+			
+		</div>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
 	<script src="js/login.js"></script>
+	<script src="js/profile.js"></script>
+	<script src="js/repo.js"></script>
 </body>
 </html>

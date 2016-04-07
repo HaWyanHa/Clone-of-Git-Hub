@@ -1,6 +1,6 @@
 (function(ns) {
-	"use strict"
-//09688f98b42472dbec3fb1468e0187e9a07fa9ad
+	"use strict";
+//
 	ns.authTok = "" 
 	var authTok;
 	//= ns.authTok
@@ -10,6 +10,7 @@
 	ns.repos;
 	ns.followers;
 	ns.creation;
+	ns.avatar;
 	
 	$("#login").on("click", function(){
 		event.preventDefault();
@@ -32,12 +33,19 @@
 				ns.name = data.name;
 				ns.repos = data.public_repos;
 				ns.followers = data.followers;
-				ns.creation = data.created_at.substring(0,9);
-				console.log(ns.creation);
+				ns.creation = data.created_at.substring(0,10);
+				ns.avatar = data.avatar_url;
+				console.log(ns.avatar);
 
+				$("#main-login").hide();
+
+				ns.showProfile();
+			},
+			error: function wrong(){
+				console.log("error");
 			}
 		});
 	});
 
-	window.gtt = ns
+	window.gtt = ns;
 })(window.gtt || {});
