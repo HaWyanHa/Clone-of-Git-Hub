@@ -1,6 +1,6 @@
 (function(ns) {
 	"use strict";
-//
+//e64b3adf88f4a2b74716fa59d777d67312373806
 	ns.authTok = "" 
 	var authTok;
 	//= ns.authTok
@@ -37,9 +37,11 @@
 				ns.avatar = data.avatar_url;
 				console.log(ns.avatar);
 
-				$("#main-login").hide();
+				window.location.hash = "#profile";
 
-				ns.showProfile();
+				// $("#main-login").hide();
+
+				// ns.showProfile();
 			},
 			error: function wrong(){
 				console.log("error");

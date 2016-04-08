@@ -11,18 +11,18 @@
 	<div class="col-sm-12">
 		<nav>
 			<ul id="navigation" class="nav nav-tabs">
-				<li id="home"><a>Home</a></li>
-				<li id="repo"><a>Repo</a></li>
-				<li id="repo-detail"><a>Repo Detail</a></li>
-				<li id="repo-issues"><a>Repo Issues</a></li>
-				<li id="new-issues"><a>New Issue</a></li>
+				<li id="home"><a href="#profile">Home</a></li>
+				<li id="repo"><a href="#repo">Repo</a></li>
+				<li id="repo-detail"><a href="#repodetail">Repo Detail</a></li>
+				<li id="repo-issues"><a href="#repoissues">Repo Issues</a></li>
+				<li id="new-issues"><a href="#newissues">New Issue</a></li>
 				<li id="logout">Logout</li>
 			</ul>
 		</nav>
 	</div>
 </div>
 
-	<section id="main-login">
+	<section id="main-login" class="view">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -42,11 +42,11 @@
 			</div>
 		</div>
 	</section>
-	<section id="main-profile">
+	<section id="profile" class="view">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					<ul id="profile">
+					<ul id="profile2">
 					<!-- 	<li>Example</li>
 						<li>Example</li>
 						<li>Example</li>
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section id="repo-table" class="view">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -77,13 +77,22 @@
 					</table>		
 				</div>	
 			</div>
-			
 		</div>
+	</section>
+	<section id="repodetails" class="view">
+		<h2></h2>
+		<h3></h3>
+		<ul>
+			
+		</ul>
+		
 	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
 	<script src="js/login.js"></script>
 	<script src="js/profile.js"></script>
 	<script src="js/repo.js"></script>
+	<script src="js/nav.js"></script>
+	<script src="js/repodetail.js"></script>
 </body>
 </html>
