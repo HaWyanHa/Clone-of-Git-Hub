@@ -22,6 +22,7 @@
 		$("#home").addClass("active").show();
 		// $("#repo").show();
 		$("#repo").removeClass("active").show();
+		$("#repo-detail").hide();
 
 
 	}
