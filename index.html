@@ -96,8 +96,15 @@
 	<section id="issue-table" class="view">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-6">
 					<h2></h2>
+				</div>
+				<div class="col-sm-6">
+					<button id="newissuebutton"></button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
 					<table class="table">
 						<thead>
 							<tr>
@@ -113,8 +120,24 @@
 			</div>
 		</div>
 	</section>
+	<section id="new-issue" class="view">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<form id="ajaxcall">
+						<fieldset>
+							<input type="text" value="title"></input>
+							<input type="text" value="body"></input>
+							<input type="submit" value="submit"></input>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+	<script src="js/newissue.js"></script>
 	<script src="js/login.js"></script>
 	<script src="js/profile.js"></script>
 	<script src="js/repo.js"></script>

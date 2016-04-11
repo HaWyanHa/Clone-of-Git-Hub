@@ -16,7 +16,6 @@
 		section.find("li").remove();
 		section.find("h2").text("");
 		section.find("h3").text("");
-
 		section.find("h3").append($("<a>").attr("href", "#openissues_" + ns.repoz[repoName].reponame).text(ns.repoz[repoName].openissues + " open issues"))
 
 		section.find($("h2").append($("<a>").attr("href", ns.repoz[repoName].giturl).text(repoName)));

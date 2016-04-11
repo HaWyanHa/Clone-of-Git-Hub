@@ -3,24 +3,25 @@
 
 	// ns["repoman"] = {};
 	// ns["repoman"].load = function load(){
-		ns.repoowner;
-		ns.repostars;
-		ns.repoforks;
-		ns.repocreated;
-
 		ns.repo = {};
+
+		ns.repoz = {};
+
 
 		ns.repo.load = function repoLoad(){
 			console.log("repo working");
 			$("#home").removeClass("active");
 			$("#repo").addClass("active");
 
+			$("#repo-detail").hide();
 			$("#main-profile").hide();
+			$("#repo-issues").hide();
 			$("#repo-table").show();
+
 
 			$.ajax({
 				type: "GET",
-				url: "https://api.github.com/users/HaWyanHa/repos",
+				url: "https://api.github.com/users/" + ns.username + "/repos",
 				dataType: "JSON",
 				//contentType: "application/json" //Probably don't need this
 				headers: {
@@ -31,19 +32,31 @@
 					$("#repo-list").empty();
 					console.log(data);
 
+					var name;
+					var current_repo;
 					for (var i=0; i < data.length; i++){
+						name = data[i].name;
 
-						ns.repoowner = data[i].owner.login;
-						ns.repostars = data[i].stargazers_count;
-						ns.repoforks = data[i].forks;
-						ns.repocreated = data[i].created_at.substring(0,10);
-					
+						current_repo = {};
+
+						current_repo.repoowner = data[i].owner.login;
+						current_repo.repostars = data[i].stargazers_count;
+						current_repo.repoforks = data[i].forks;
+						current_repo.repocreated = data[i].created_at.substring(0,10);
+						current_repo.repodescriptions = data[i].description;
+						current_repo.giturl = data[i].html_url;
+						current_repo.openissues = data[i].open_issues;
+						current_repo.reponame = data[i].name;
+
+						ns.repoz[name] = current_repo;
+
+
 						$("#repo-list")
 							.append($("<tr>")
-									.append($("<td>").append($("<a>").attr("href", "#repoDetail_" + data[i].name).text(data[i].name)))
-									.append($("<td>").text(ns.repostar))
+									.append($("<td>").append($("<a>").attr("href", "#repoDetail_" + current_repo.reponame).text(current_repo.reponame)))
+									.append($("<td>").text(current_repo.repostars))
 									.append($("<td>").text(data[i].open_issues))
-							);
+									);
 
 					}
 				}

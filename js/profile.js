@@ -23,6 +23,7 @@
 		// $("#repo").show();
 		$("#repo").removeClass("active").show();
 		$("#repo-detail").hide();
+		$("#repo-issues").hide();
 
 
 	}
