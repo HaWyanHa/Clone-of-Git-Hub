@@ -15,7 +15,7 @@
 
 			$("#repo-detail").hide();
 			$("#main-profile").hide();
-			$("#repo-issues").hide();
+			$("#repo-issues").hide();   //repeating, so I can probably put it in one line in this case the nav is doing it
 			$("#repo-table").show();
 
 
@@ -37,7 +37,9 @@
 					for (var i=0; i < data.length; i++){
 						name = data[i].name;
 
-						current_repo = {};
+						current_repo = {
+							//repoowner: ...  anytime I see myself repeating stuff I need to consider doing something like an object.
+						};
 
 						current_repo.repoowner = data[i].owner.login;
 						current_repo.repostars = data[i].stargazers_count;

@@ -6,7 +6,7 @@
 
 		$("#new-issue").show();
 
-		console.log(ns.repoz[repoName].reponame); //I dont know why reponame is undefined?
+		console.log(ns.repoz, repoName); //I dont know why reponame is undefined?
 
 		$("#ajaxcall").on("submit", function(event){
 			event.preventDefault();

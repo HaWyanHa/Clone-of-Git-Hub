@@ -24,17 +24,17 @@
 		// console.log(n);
 
 
-		if (newView.length === 0) {
-			console.log("no new view");
-			s = window.location.hash.substr(1).split("_");
-			ns[s[0]].load(s[1]);
-		}else {
-			if (ns[s[0]].load){
+		// if (newView.length === 0) {
+		// 	console.log("no new view");
+		// 	// s = window.location.hash.substr(1).split("_");
+		// 	ns[s[0]].load(s[1]);
+		// }else {     We are doing this on both sides of the if condition, so just do it once i.e. below
+			if (ns[s[0]].load){    
 
 				ns[s[0]].load(s[1]);
 				console.log("loading works");
 			}
-		}
+		// }
 	}
 
 	// ns["repo"] = {};

@@ -53,7 +53,7 @@ console.log(ns.repoz[repoName].reponame);
 
 						$("#newissuebutton").text("");
 						$("#issue-list").find("a").attr("target", "_blank");
-						$("#newissuebutton").append($("<a>").attr("href", "#newissue").text("New Issue"));
+						$("#newissuebutton").append($("<a>").attr("href", "#newissue" + ns.repoz[repoName].reponame).text("New Issue"));
 
 
 						// $("#issue-table").find("button").text("New Issue");

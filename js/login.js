@@ -1,9 +1,15 @@
 (function(ns) {
 	"use strict";
 //
-	ns.authTok = "" 
+	ns.authTok = "" ;
 	var authTok;
 	//= ns.authTok
+
+
+	ns.userData = {
+		username: null,
+		//...  makes it easier to pass all the userdata around now we just have one thing
+	};
 
 	ns.username;
 	ns.name;
