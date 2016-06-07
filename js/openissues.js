@@ -4,7 +4,7 @@
 	ns.openissues = {};
 	ns.issuez; //I thought I needed another variable but I don't think I need it anymore;
 	ns.openissues.load = function openissues(repoName){
-console.log(ns.repoz[repoName].reponame);
+		console.log(ns.repoz[repoName].reponame);
 		console.log("open issues is working");
 		$("#issue-table").show();
 		$("#repo-issues").addClass("active").show();
@@ -66,7 +66,7 @@ console.log(ns.repoz[repoName].reponame);
 
 		});
 
-	}
+	};
 
 	window.gtt = ns;
 })(window.gtt || {});
