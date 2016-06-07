@@ -20,15 +20,21 @@
 				type: "POST",
 				url: "https://api.github.com/repos/" + ns.username + "/" + ns.repoz[repoName].reponame + "/issues",
 				contentType: "application/json",
-				data: "JSON.stringify({title: formValue.title, body: formValue.body})",
+				headers: {
+					authorization: "token " + ns.authTok
+				},
+				data: JSON.stringify({title: formValue.title, body: formValue.body}),
 
-				success: function(){
+				success: function(data){
+					console.log('success data', data);
 					console.log("good");
+					window.location.hash = "#openissues_" + repoName;
 				},
 
 				error: function(){
-					console.log("why");
+					console.log(data, "why");
 				}
+
 			});
 		});
 
