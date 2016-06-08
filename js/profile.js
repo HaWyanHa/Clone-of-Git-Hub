@@ -11,7 +11,7 @@
 		p.empty();
 		$(".gitpic").empty();
 
-	    p.append($("<li>").text(ns.username));  //span class="label", span class="details" fo I can style them differently
+	    p.append($("<li>").text(ns.username));  //span class="label", span class="details" so I can style them differently
 		p.append($("<li>").text(ns.name));
 		p.append($("<li>").text(ns.repos));
 		p.append($("<li>").text(ns.followers));

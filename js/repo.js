@@ -61,7 +61,11 @@
 									);
 
 					}
+				},
+				error: function error() {
+					console.log("this did not work");
 				}
+
 			});
 		
 		};

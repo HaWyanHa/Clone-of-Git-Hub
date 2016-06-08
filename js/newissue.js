@@ -32,7 +32,7 @@
 				},
 
 				error: function(){
-					console.log(data, "why");
+					console.log("this is the ", data);
 				}
 
 			});

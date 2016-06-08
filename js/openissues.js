@@ -32,7 +32,7 @@
 
 					var issue;
 					var current_issue;
-					
+
 					for (var i=0; i<data.length; i++){
 						issue = data[i].name;
 						current_issue = {};
@@ -63,8 +63,10 @@
 						// $("#issue-table").find("button").attr("href", "#newissue")
 
 					}
+				},
+				error: function errorHandler() {
+					console.log("Nothing to see here");
 				}
-
 
 
 		});
